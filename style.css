@@ -11,7 +11,7 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-/* Custom scrollbar for other elements (optional) */
+/* Custom scrollbar for other elements (like lyrics section) */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -24,4 +24,10 @@
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.3);
+}
+
+/* Message modal content - wrap text instead of horizontal scroll */
+#message-content {
+    white-space: pre-wrap;
+    word-break: break-word;
 }

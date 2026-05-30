@@ -152,6 +152,17 @@ function loadPlaylist() {
         li.addEventListener('click', () => {
             loadSong(index);
             playSong();
+            
+            // Close sidebar on mobile when song is selected
+            if (window.innerWidth < 640) {
+                const sidebar = document.getElementById('sidebar');
+                const mobileOverlay = document.getElementById('mobile-overlay');
+                if (sidebar && mobileOverlay) {
+                    sidebar.classList.add('-translate-x-full');
+                    sidebar.classList.remove('translate-x-0');
+                    mobileOverlay.classList.add('hidden');
+                }
+            }
         });
         playlistElement.appendChild(li);
     });
@@ -288,15 +299,39 @@ function formatTime(seconds) {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
-// Setup event listeners for controls
-function setupEventListeners() {
-    playPauseBtn.addEventListener('click', togglePlayPause);
-    prevBtn.addEventListener('click', prevSong);
-    nextBtn.addEventListener('click', nextSong);
-    shuffleBtn.addEventListener('click', toggleShuffle);
-    repeatBtn.addEventListener('click', toggleRepeat);
-    
-    // Volume slider
+        // Setup event listeners for controls
+        function setupEventListeners() {
+            playPauseBtn.addEventListener('click', togglePlayPause);
+            prevBtn.addEventListener('click', prevSong);
+            nextBtn.addEventListener('click', nextSong);
+            shuffleBtn.addEventListener('click', toggleShuffle);
+            repeatBtn.addEventListener('click', toggleRepeat);
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const sidebar = document.getElementById('sidebar');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            
+            if (mobileMenuBtn && sidebar && mobileOverlay) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    if (window.innerWidth < 640) {
+                        sidebar.classList.toggle('-translate-x-full');
+                        sidebar.classList.toggle('translate-x-0');
+                        mobileOverlay.classList.toggle('hidden');
+                    }
+                });
+                
+                // Close sidebar when clicking overlay
+                mobileOverlay.addEventListener('click', () => {
+                    if (window.innerWidth < 640) {
+                        sidebar.classList.add('-translate-x-full');
+                        sidebar.classList.remove('translate-x-0');
+                        mobileOverlay.classList.add('hidden');
+                    }
+                });
+            }
+            
+            // Volume slider
     volumeSlider.addEventListener('input', (e) => {
         audio.volume = e.target.value;
     });
