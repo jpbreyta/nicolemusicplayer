@@ -97,6 +97,46 @@ const playlist = [
         audio: "mp3/Olivia Rodrigo - teenage dream (Official Lyric Video) [F33uCg-3XiY].mp3",
         lyrics: "text/teenage dream.txt",
         albumArt: "Guts.jpg"
+    },
+    {
+        id: 13,
+        title: "girl i've always been",
+        artist: "Olivia Rodrigo",
+        audio: "mp3/Olivia Rodrigo - girl i've always been (Official Lyric Video) [1-dT9r5nbks].mp3",
+        lyrics: "text/girl i've always been.txt",
+        albumArt: "Guts.jpg"
+    },
+    {
+        id: 14,
+        title: "obsessed",
+        artist: "Olivia Rodrigo",
+        audio: "mp3/Olivia Rodrigo - obsessed (Official Lyric Video) [CxFa6r8uRNw].mp3",
+        lyrics: "text/obsessed.txt",
+        albumArt: "Guts.jpg"
+    },
+    {
+        id: 15,
+        title: "scared of my guitar",
+        artist: "Olivia Rodrigo",
+        audio: "mp3/Olivia Rodrigo - scared of my guitar (Official Lyric Video) [02Ai_4eG6ug].mp3",
+        lyrics: "text/scared of my guitar.txt",
+        albumArt: "Guts.jpg"
+    },
+    {
+        id: 16,
+        title: "so american",
+        artist: "Olivia Rodrigo",
+        audio: "mp3/Olivia Rodrigo - so american (Official Lyric Video) [W-PGNyhmSKA].mp3",
+        lyrics: "text/so american.txt",
+        albumArt: "Guts.jpg"
+    },
+    {
+        id: 17,
+        title: "stranger",
+        artist: "Olivia Rodrigo",
+        audio: "mp3/Olivia Rodrigo - stranger (Official Lyric Video) [no0S6UzeRlA].mp3",
+        lyrics: "text/stranger.txt",
+        albumArt: "Guts.jpg"
     }
     // Note: You can add more songs here if you have additional files
 ];
