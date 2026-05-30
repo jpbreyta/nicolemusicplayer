@@ -1,0 +1,27 @@
+/* Custom styles for Nicole's Music Player */
+/* Tailwind is loaded via CDN in HTML */
+/* Add any custom CSS here if needed */
+
+/* Hide scrollbar for sidebar */
+.profile::-webkit-scrollbar {
+    display: none;
+}
+.profile {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom scrollbar for other elements (optional) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
